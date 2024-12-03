@@ -53,7 +53,7 @@
       { "clash_mode": "Global", "server": "dns_fakeip" },
       { "clash_mode": "Direct", "server": "dns_direct" },
       {
-        "rule_set": ["ads", "adb-1", "adb-2", "ads-p", "privacy"],
+        "rule_set": ["AWAvenue-Ads", "anti-ad", "ads-p", "privacy"],
         "server": "dns_block"
       },
       {
@@ -103,16 +103,10 @@
       {
         "fallback_rules": [
           { "rule_set": ["cn-ip"], "server": "dns_direct" },
-          { "match_all": true, "server": "dns_fakeip", "rewrite_ttl": 1, "disable_cache": true }
+          { "match_all": true, "server": "dns_fakeip", "rewrite_ttl": 0, "disable_cache": true }
         ],
         "disable_cache": true,
         "server": "dns_proxy"
-      },
-      {
-        "query_type": ["A", "AAAA"],
-        "rewrite_ttl": 1,
-        "disable_cache": true,
-        "server": "dns_fakeip"
       }
     ],
     "final": "dns_proxy",

@@ -80,9 +80,8 @@
             },
             {
                 "rule_set": [
-                    "ads",
-                    "adb-1",
-                    "adb-2",
+                    "AWAvenue-Ads",
+                    "anti-ad",
                     "ads-p",
                     "privacy"
                 ],
@@ -152,21 +151,12 @@
                     {
                         "match_all": true,
                         "server": "dns_fakeip",
-                        "rewrite_ttl": 10,
+                        "rewrite_ttl": 0,
                         "disable_cache": true
                     }
                 ],
                 "disable_cache": true,
                 "server": "dns_proxy"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "rewrite_ttl": 1,
-                "disable_cache": true,
-                "server": "dns_fakeip"
             }
         ],
         "final": "dns_proxy",
@@ -772,15 +762,11 @@
                 "outbound": "🎯 全球直连"
             },
             {
-                "rule_set": "ads",
+                "rule_set": "AWAvenue-Ads",
                 "outbound": "🛑 广告拦截"
             },
             {
-                "rule_set": "adb-1",
-                "outbound": "🆎 AdBlock"
-            },
-            {
-                "rule_set": "adb-2",
+                "rule_set": "anti-ad",
                 "outbound": "🆎 AdBlock"
             },
             {
@@ -952,17 +938,17 @@
                 "download_detour": "DIRECT"
             },
             {
-                "tag": "adb-1",
+                "tag": "AWAvenue-Ads",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/ACL4SSR@dev/SingBox/CustomRules/BanEasyListChina.srs",
+                "url": "https://cdn.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs",
                 "download_detour": "DIRECT"
             },
             {
-                "tag": "adb-2",
+                "tag": "anti-ad",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/ACL4SSR@dev/SingBox/CustomRules/BanEasyList.srs",
+                "url": "https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-ad.github.io@master/docs/anti-ad-sing-box.srs",
                 "download_detour": "DIRECT"
             },
             {
