@@ -125,6 +125,7 @@
             },
             {
                 "rule_set": [
+                    "fakeip-filter",
                     "direct-0",
                     "direct-1",
                     "google-cn",
@@ -279,7 +280,6 @@
                 "🇸🇬 狮城节点",
                 "🇺🇲 美国节点",
                 "🇪🇺 欧洲节点",
-                "🕹️ 游戏节点",
                 "DIRECT"
             ]
         },
@@ -303,7 +303,6 @@
             "type": "selector",
             "tag": "🎥 奈飞视频",
             "outbounds": [
-                "🎥 奈飞节点",
                 "🚀 节点选择",
                 "♻️ 自动选择",
                 "🇸🇬 狮城节点",
@@ -472,8 +471,6 @@
             "type": "selector",
             "tag": "🎮 游戏平台",
             "outbounds": [
-                "DIRECT",
-                "🕹️ 游戏节点",
                 "🚀 节点选择",
                 "🇺🇲 美国节点",
                 "🇭🇰 香港节点",
@@ -481,7 +478,8 @@
                 "🇸🇬 狮城节点",
                 "🇯🇵 日本节点",
                 "🇰🇷 韩国节点",
-                "🚀 手动切换"
+                "🚀 手动切换",
+                "DIRECT"
             ]
         },
         {
@@ -490,8 +488,7 @@
             "outbounds": [
                 "DIRECT",
                 "🚀 节点选择",
-                "♻️ 自动选择",
-                "🎶 网易节点"
+                "♻️ 自动选择"
             ]
         },
         {
@@ -673,46 +670,6 @@
                 "KR|Korea|KOR|首尔|韩|韓"
             ],
             "url": "http://www.apple.com/library/test/success.html",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "type": "urltest",
-            "tag": "🕹️ 游戏节点",
-            "providers": [
-                "🛫 FastLink"
-            ],
-            "includes": [
-                "游戏|Game|Gaming|Gamer|玩家"
-            ],
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "type": "urltest",
-            "tag": "🎶 网易节点",
-            "providers": [
-                "🛫 FastLink",
-                "🛫 NiceCloud"
-            ],
-            "includes": [
-                "网易|音乐|解锁|Music|NetEase"
-            ],
-            "excludes": "游戏",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "type": "urltest",
-            "tag": "🎥 奈飞节点",
-            "providers": [
-                "🛫 FastLink",
-                "🛫 NiceCloud"
-            ],
-            "includes": [
-                "NF|奈飞|解锁|Netflix|NETFLIX|Media"
-            ],
-            "excludes": "音乐",
             "interval": "5m",
             "tolerance": 50
         },
