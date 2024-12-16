@@ -991,7 +991,7 @@
                 "tag": "gemini",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/ACL4SSR@dev/SingBox/CustomRules/Gemini.srs",
+                "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/Ephemeral-Rule-Set@master/sing-box/custom-ruleset/Gemini.srs",
                 "download_detour": "DIRECT"
             },
             {
