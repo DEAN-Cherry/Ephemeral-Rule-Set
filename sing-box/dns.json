@@ -103,8 +103,8 @@
       },
       {
         "fallback_rules": [
-          { "rule_set": ["cn-ip","cn","cloud-cn"], "server": "dns_direct" },
-          { "match_all": true, "server": "dns_fakeip", "rewrite_ttl": 1, "disable_cache": true }
+          { "rule_set": ["cn-ip","cn"], "server": "dns_direct" },
+          { "match_all": true, "server": "dns_fakeip", "disable_cache":true, "rewrite_ttl": 1}
         ],
         "disable_cache": true,
         "server": "dns_proxy"
