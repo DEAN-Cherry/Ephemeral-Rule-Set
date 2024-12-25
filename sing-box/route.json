@@ -28,7 +28,6 @@
       { "rule_set": "games-4", "outbound": "🎮 游戏平台" },
       { "rule_set": "games-5", "outbound": "🎮 游戏平台" },
       { "rule_set": "youtube", "outbound": "📹 油管视频" },
-      { "rule_set": "netflix", "outbound": "🎥 奈飞视频" },
       { "rule_set": "baha", "outbound": "📺 巴哈姆特" },
       { "rule_set": "bilibili-hmt", "outbound": "📺 哔哩哔哩" },
       { "rule_set": "bilibili", "outbound": "📺 哔哩哔哩" },
@@ -229,13 +228,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/meta-rules-dat@sing/bm7/YouTube.srs",
-        "download_detour": "DIRECT"
-      },
-      {
-        "tag": "netflix",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/meta-rules-dat@sing/bm7/Netflix.srs",
         "download_detour": "DIRECT"
       },
       {

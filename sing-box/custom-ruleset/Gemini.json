@@ -3,7 +3,7 @@
     {
       "domain": ["gemini.google.com"],
       "domain_keyword": ["gemini"],
-      "domain_suffix": [".gemini.google.com", "ipinfo.io"]
+      "domain_suffix": [".gemini.google.com", "ipinfo.io", "generativelanguage.googleapis.com"]
     }
   ],
   "version": 1

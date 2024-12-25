@@ -100,7 +100,6 @@
                     "conjbai",
                     "server",
                     "youtube",
-                    "netflix",
                     "baha",
                     "media-proxy",
                     "proxy"
@@ -285,22 +284,6 @@
         {
             "type": "selector",
             "tag": "📹 油管视频",
-            "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
-                "🇸🇬 狮城节点",
-                "🇭🇰 香港节点",
-                "🇹🇼 台湾节点",
-                "🇯🇵 日本节点",
-                "🇺🇲 美国节点",
-                "🇰🇷 韩国节点",
-                "🚀 手动切换",
-                "DIRECT"
-            ]
-        },
-        {
-            "type": "selector",
-            "tag": "🎥 奈飞视频",
             "outbounds": [
                 "🚀 节点选择",
                 "♻️ 自动选择",
@@ -808,10 +791,6 @@
                 "outbound": "📹 油管视频"
             },
             {
-                "rule_set": "netflix",
-                "outbound": "🎥 奈飞视频"
-            },
-            {
                 "rule_set": "baha",
                 "outbound": "📺 巴哈姆特"
             },
@@ -1047,13 +1026,6 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/meta-rules-dat@sing/bm7/YouTube.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "netflix",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/DEAN-Cherry/meta-rules-dat@sing/bm7/Netflix.srs",
                 "download_detour": "DIRECT"
             },
             {
