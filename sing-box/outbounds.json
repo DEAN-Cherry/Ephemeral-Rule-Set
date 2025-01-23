@@ -26,7 +26,7 @@
       "type": "urltest",
       "tag": "♻️ 自动选择",
       "providers": ["🛫 FastLink", "🛫 NiceCloud"],
-      "excludes": "游戏|官网|客户端|福利|最新|剩余|地址",
+      "excludes": "游戏|官网|客户端|福利|最新|剩余|地址|时间",
       "url": "http://www.apple.com/library/test/success.html",
       "interval": "5m",
       "tolerance": 50
@@ -335,7 +335,7 @@
       "excludes": "游戏",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
-      "tolerance": 50,
+      "tolerance": 100,
       "interrupt_exist_connections": true
     },
     {
@@ -346,7 +346,7 @@
       "excludes": "游戏",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
-      "tolerance": 50,
+      "tolerance": 100,
       "interrupt_exist_connections": true
     },
     {
@@ -356,7 +356,7 @@
       "includes": ["台|新北|彰化|TW|Taiwan"],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
-      "tolerance": 50
+      "tolerance": 100
     },
     {
       "type": "urltest",
@@ -366,7 +366,7 @@
       "excludes": "游戏",
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
-      "tolerance": 50
+      "tolerance": 100
     },
     {
       "type": "urltest",
