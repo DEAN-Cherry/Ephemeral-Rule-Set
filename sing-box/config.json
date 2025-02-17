@@ -552,6 +552,7 @@
             "url": "https://www.gstatic.com/generate_204",
             "interval": "5m",
             "tolerance": 100,
+            "idle_timeout": "15m",
             "interrupt_exist_connections": true
         },
         {
@@ -567,6 +568,7 @@
             "url": "https://www.gstatic.com/generate_204",
             "interval": "5m",
             "tolerance": 100,
+            "idle_timeout": "15m",
             "interrupt_exist_connections": true
         },
         {
