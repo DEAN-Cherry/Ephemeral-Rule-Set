@@ -1,0 +1,46 @@
+#用于编写自定义设定(可参考https://lancellc.gitbook.io/clash/clash-config-file/general 或 https://docs.metacubex.one/function/general)
+#端口之类请在脚本中修改，否则不会加载
+#port: 7890
+hosts:
+  doh.pub: [1.12.12.12, 120.53.53.53, 2402:4e00::]
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com:
+    [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+dns:
+  enable: true
+  listen: :1053
+  use-hosts: true
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/15
+  fake-ip-filter:
+    - "*.AX60"
+    - "*.AX6S"
+    - "rule-set:cn"
+    - "rule-set:fake-ip-filter"
+    - "rule-set:microsoft-cn"
+    - "rule-set:apple-cn"
+    - "rule-set:games-cn"
+    - "rule-set:google-cn"
+    - "rule-set:server"
+    - "rule-set:bilibili"
+    - "rule-set:private"
+    - "rule-set:steam"
+    - "rule-set:epic"
+    - "rule-set:origin"
+  nameserver: [
+      https://doh.pub/dns-query
+      https://dns.alidns.com/dns-query,
+    ]
+  direct-nameserver: [
+      https://doh.pub/dns-query
+      https://dns.alidns.com/dns-query,
+    ]
+  fallback: [
+      https://dns.google/dns-query
+      https://cloudflare-dns.com/dns-query,
+    ]

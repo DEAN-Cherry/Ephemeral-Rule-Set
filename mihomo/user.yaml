@@ -1,0 +1,43 @@
+#用于编写自定义设定(可参考https://lancellc.gitbook.io/clash/clash-config-file/general 或 https://docs.metacubex.one/function/general)
+#端口之类请在脚本中修改，否则不会加载
+#port: 7890
+dns:
+  enable: true
+  listen: :1053
+  use-hosts: true
+  ipv6: true
+  default-nameserver:
+    - "https://223.5.5.5/dns-query" # 阿里DoH
+    - "https://120.53.53.53/dns-query" # 腾讯DoH
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/15
+  fake-ip-filter:
+    - "rule-set:cn"
+    - "rule-set:fake-ip-filter"
+    - "rule-set:microsoft-cn"
+    - "rule-set:apple-cn"
+    - "rule-set:games-cn"
+    - "rule-set:server"
+    - "rule-set:bilibili"
+    - "rule-set:private"
+    - "rule-set:steam"
+    - "rule-set:epic"
+    - "rule-set:origin"
+  nameserver:
+    [
+      https://1.1.1.1:443/dns-query, # CloudflareDNS
+      https://8.8.4.4/dns-query,
+      https://doh.opendns.com:443/dns-query, # OpenDNS
+    ]
+  nameserver-policy:
+    "rule-set:cn,fake-ip-filter,microsoft-cn,apple-cn,games-cn,server,bilibili,private":
+      [
+        https://dns.alidns.com/dns-query,
+        https://doh.pub/dns-query,
+      ]
+  fallback:
+    [
+      https://8.8.4.4/dns-query,
+      https://223.5.5.5/dns-query,
+      https://doh.pub/dns-query,
+    ]
