@@ -20,12 +20,15 @@ dns:
     - 'rule-set:server'
     - 'rule-set:private'
   nameserver:
-    - 'https://doh.pub/dns-query'
-    - 'https://dns.alidns.com/dns-query'
+    - quic://223.5.5.5
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   nameserver-policy:
     'rule-set:cn,fake-ip-filter,microsoft-cn,apple-cn,games-cn,server,bilibili,private':
-      - 'https://doh.pub/dns-query'
-      - 'https://115585-ephemushroom.alidns.com/dns-query'
+      - tls://dns.alidns.com
+      - tls://dot.pub
+      - https://doh.pub/dns-query
+      - https://115585-ephemushroom.alidns.com/dns-query
     'rule-set:douyin':
       - 180.184.1.1
       - 'https://doh.pub/dns-query'
@@ -35,7 +38,8 @@ dns:
     - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
   proxy-server-nameserver:
+    - tls://dns.alidns.com
+    - tls://dot.pub
     - https://doh.pub/dns-query
-    - https://dns.google/dns-query
   direct-nameserver:
     - system
