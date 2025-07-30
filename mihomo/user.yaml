@@ -28,7 +28,6 @@ dns:
       - tls://dns.alidns.com
       - tls://dot.pub
       - https://doh.pub/dns-query
-      - https://115585-ephemushroom.alidns.com/dns-query
     'rule-set:douyin':
       - 180.184.1.1
       - 'https://doh.pub/dns-query'
