@@ -1,6 +1,12 @@
 #用于编写自定义设定(可参考https://lancellc.gitbook.io/clash/clash-config-file/general 或 https://docs.metacubex.one/function/general)
 #端口之类请在脚本中修改，否则不会加载
 #port: 7890
+geox-url: # 下载 geoip.dat 数据库的地址
+  geoip: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geoip-all.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/geosite-all.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/Country-all.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo/Country-ASN-all.mmdb"
+
 dns:
   enable: true
   cache-algorithm: arc
@@ -36,6 +42,8 @@ dns:
     - tls://1.1.1.1
     - https://1.1.1.1/dns-query
     - https://dns.google/dns-query
+  fallback-filter:
+    geoip: false
   proxy-server-nameserver:
     - tls://dns.alidns.com
     - tls://dot.pub
