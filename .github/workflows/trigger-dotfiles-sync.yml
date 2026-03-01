@@ -1,0 +1,19 @@
+name: Trigger dotfiles sync
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'mihomo/user.yaml'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger dotfiles sync
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.DOTFILES_SYNC_PAT }}" \
+            https://api.github.com/repos/DEAN-Cherry/dotfiles/dispatches \
+            -d '{"event_type":"sync-user-yaml"}'
