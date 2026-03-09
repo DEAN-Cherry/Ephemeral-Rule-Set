@@ -25,11 +25,14 @@ dns:
     - 'rule-set:games-cn'
     - 'rule-set:server'
     - 'rule-set:private'
+    - '+.ts.net'
   nameserver:
     - quic://223.5.5.5
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   nameserver-policy:
+    '+.ts.net':
+      - 100.100.100.100
     'rule-set:cn,fake-ip-filter,microsoft-cn,apple-cn,games-cn,server,bilibili,private':
       - tls://dns.alidns.com
       - tls://dot.pub
